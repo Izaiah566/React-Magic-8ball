@@ -1,0 +1,72 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+  .container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    color: #f6efef;
+}
+
+/* Form styles */
+
+input, button {
+    padding: 10px;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.black-ball{
+    width: 330px;
+    height: 330px;
+    background-color: #0e0d0d;
+    border-radius: 60%;
+    position: relative;
+    margin: auto;
+    top: 50px;
+}
+
+.answer-div {
+    font-weight: bold;
+    width: 150px;
+    height: 150px;
+    background-color:#fff;
+    color: black;
+    border-radius: 60%;
+    position: relative;
+    margin:auto;
+    top: 90px;
+}
+
+.answer {
+    padding-top: 55px;
+    font-size: 1.8em;
+}
+  
+
+button {
+    border: #222;
+    
+}
