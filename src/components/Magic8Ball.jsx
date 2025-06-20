@@ -7,6 +7,7 @@ const Magic8Ball = () => {
     const [userInput, setUserInput] = useState('');
     const [randomIndex, setRandomIndex] = useState('');
     const [error, setError] = useState('');
+    const [isShaking, setIsShaking] = useState(false);
 
     const answers = ["Yes",
     "no",
@@ -28,7 +29,9 @@ const Magic8Ball = () => {
 
     const handleClick = () => {
         if (userInput) {
+            setIsShaking(true);
             setTimeout(()=>{
+                setIsShaking(false);
                 setError('');
                 setRandomIndex(Math.floor(Math.random() * answers.length));
                 setUserInput('');
@@ -54,7 +57,7 @@ const Magic8Ball = () => {
                 <button onClick={handleClick}>Submit</button>
             </div>
             <p className="error">{error}</p>
-            <div className="black-ball animate">
+            <div className={"black-ball animate"}>
                 <div className="answer-div">
                     <p className="answer">{answer}</p>
                 </div>
