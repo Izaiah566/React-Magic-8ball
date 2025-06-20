@@ -28,9 +28,11 @@ const Magic8Ball = () => {
 
     const handleClick = () => {
         if (userInput) {
-            setError('');
-            setRandomIndex(Math.floor(Math.random() * answers.length));
-            setUserInput('');
+            setTimeout(()=>{
+                setError('');
+                setRandomIndex(Math.floor(Math.random() * answers.length));
+                setUserInput('');
+            }, 3000);
         } else {
             setError('Enter a question to know the answer!');
         }
