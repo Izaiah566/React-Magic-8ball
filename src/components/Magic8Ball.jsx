@@ -35,7 +35,7 @@ const Magic8Ball = () => {
                 setError('');
                 setRandomIndex(Math.floor(Math.random() * answers.length));
                 setUserInput('');
-            }, 3000);
+            }, 300);
         } else {
             setError('Enter a question to know the answer!');
         }
@@ -57,7 +57,16 @@ const Magic8Ball = () => {
                 <button onClick={handleClick}>Submit</button>
             </div>
             <p className="error">{error}</p>
-            <div className={"black-ball animate"}>
+            <div className={isShaking ? 'black-ball animate' : ''} 
+            style={{backgroundColor: 'black',
+                    background: 'linear-gradient(to bottom right, black, white)',
+                    width: '330px',
+                    height: '330px',
+                    borderRadius: '60%',
+                    position: 'relative',
+                    margin: 'auto',
+                    top: '50px'
+            }}>
                 <div className="answer-div">
                     <p className="answer">{answer}</p>
                 </div>
